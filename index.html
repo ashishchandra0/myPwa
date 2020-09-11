@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="image/1.png">
+    <meta name="theme-color" content="#F100FF"/>
+    <link rel="manifest" href="manifest.json">
+
+    <title>MyPWA</title>
+</head>
+<body>
+    <h1>This is pwa</h1>
+    <script>
+        if("serviceWorker" in navigator){
+    navigator.serviceWorker.register("service-worker.js").then(registration =>{
+        console.log("sw registered");
+        console.log(registration);
+    }).catch(error =>{
+        console.log("sw registraion failed");
+        console.log(error);
+    });
+}
+    </script>
+</body>
+</html>
